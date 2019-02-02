@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<html>
+	<head>
+		<title> Website Development, Computer Set ups and Computer Maintance </title>
+		
+		<meta name = "viewpoint" content = "width = device-width, initial-scale = 1.0">
+		<meta charset="utf-8">
+		<!-- links to my css-->
+		<link rel = "stylesheet" href= "pages/css/mycss.css">
+		<link rel = "stylesheet" href= "pages/css/cssAnimations.css">
+		
+		<!-- links to bootstrap-->
+		<link rel = "stylesheet"  href = "pages/bootstrap/css/bootstrap.css" type = "text/css">
+		<link rel = "stylesheet"  href = "pages/bootstrap/css/bootstrap.min.css" type = "text/css">
+		
+		<script src = "pages/jquery/jquery-3.3.1.js"> </script>
+		
+		<!-- internal style sheets -->
+		<style>
+		.arrows{
+			display:none;
+		}
+		
+		.arrow1{
+			display:block;
+			transition: display 2s;
+		}
+		
+		.product-name{
+			display:none; 
+		}
+		</style>
+		
+		<!-- jquery -->
+		<script>
+			$(document).ready(function (){
+			/*
+			//on mouse in the container 
+				$(".animation-container").mouseover(function (){
+					$(".arrows").addClass("arrow1");
+				});
+			//on mouse out of the container
+				$(".animation-container").mouseout(function (){
+					$(".arrows").removeClass("arrow1");
+				});
+			 */
+			$(".animation-container").hover(function (){
+					$(".arrows").toggle(500);
+				});
+				
+			/*hide and show products information
+					maintainance 
+			*/
+			$("#product-category-maintance").hover(function(){
+				$(".maintance").toggle();
+			});
+			//		set ups 	
+			$("#products-category-setup").hover(function(){
+				$(".setup").toggle();
+			});
+			//		webdevelopments 	
+			$("#product-category-webdevelopment").hover(function(){
+				$(".webdevelopment").toggle();
+			});
+			});
+		</script>
+	</head>
+	
+	<body>
+		<div class = "container">
+		<!-- logo -->
+			<div class = "row">
+				<div class = "col-md-12 phone-email">
+					<p> &#9990; +27 78 270 5108 &nbsp&nbsp&nbsp &#9993;  tichiwangana@live.com</p>
+				</div>
+			</div>
+			
+		<!--- center -->
+			<div class = "row">
+				<div class = "col-md-12">
+					<div class = "animation-container">
+						
+					<!-- animations start here  -->	
+						<!-- web developments-->
+						<div class = "mySlides fade1">
+							<h2 class = "product name"> Web Development</h2>
+							<img class = "product logo" src = "pages/images/web2.jpg" width = "120px" height = "100px">
+							<p class = "product details">we develop best sites </p>
+						</div>
+						
+						<!-- computer installations -->
+						<div class = "mySlides fade2">
+							<h2 class = "product2 name2"> Software </h2>
+							<img class = "product2 logo2" src = "pages/images/Tulips.jpg" width = "120px" height = "100px">
+							<p class = "product2 details2"> we repair softwares  </p>
+						</div>
+						
+						<!-- computer repair -->
+						<div class = "mySlides fade3">
+							<h2 class = "product3 name3"> Computer Repair </h2>
+							<img class = "product3 logo3" src = "pages/images/webdevelopment.png" width = "120px" height = "100px">
+							<p class = "product3 details3"> we repair computers  </p>
+						</div>
+						
+					</div>
+					<script>
+						//javascript animation starts here 
+					</script>
+				</div>
+			</div>
+			
+			<!-- Pagination -->
+			<div class = "row">
+				<div class = "col-md-12">
+					<div class = "pagination">
+						<a href = "#"> &laquo; </a>
+						<a class = "active" href = "#"> 1 </a>
+						<a href = "pages/page2.html"> 2 </a>
+						<a href = "pages/page3.html"> 3 </a>
+						<a href = "#"> &raquo; </a>
+					</div>
+				</div>
+			</div>
+			
+		<!-- products -->
+			<div class = "row">
+				<hr class = "my-hr">
+				<div class = "col-md-4 products">
+					<div class = "product-category" id = "product-category-webdevelopment">
+						<img src = "pages/images/world-wide-web.png" width = "120px" height = "100px">
+						<h2> Web Development</h2>
+						<div class = "products-info webdevelopment">
+							<p>we develop best sites </p>
+						</div>
+					</div>
+				</div>
+				
+				<div class = "col-md-4">
+					<div class = "product-category" id = "products-category-setup">
+						<img src = "pages/images/computer.png" width = "120px" height = "100px">
+						<h2> Set Ups</h2>
+						<div class = "products-info setup">
+							<p>
+								set up a new working environemt
+							</p>
+						</div>
+					</div>
+				</div>
+				
+				<div class = "col-md-4">
+					<div class = "product-category" id = "product-category-maintance">					
+						<img src = "pages/images/technical-support.png" width = "120px" height = "100px">						
+						<h2> Maintance Services </h2>
+						<div class = "products-info maintance">
+							<p>
+								Gimli Electronics is a repair specialist on IT components, laptops, monitors and PC hardware. We have 15 years experience in the market
+							</p>
+						</div>
+					</div>
+				</div>		
+			</div>
+					
+		<!-- footer-->
+			<div class = "row">
+				<hr class = "my-hr">
+				<div class = "col-md-12 my-footer">
+					<p> Copyright act <span id = "date"> </span> </p>
+					<script>
+						var currentdate = document.getElementById('date');
+						var date = new Date();
+						currentdate.innerHTML = date.getFullYear(); 
+					</script>
+				</div>
+			</div>
+		</div>
+		
+	</body>
+</html>

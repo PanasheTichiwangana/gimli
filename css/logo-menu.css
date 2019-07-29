@@ -1,0 +1,23 @@
+.logo-menu{
+	height:120px; 
+	padding-top:50px; 
+}
+
+@font-face{
+	font-family:realitysunday;
+	src:url(../fonts/realitysunday/RealitySunday.ttf);
+}
+
+@font-face{
+	font-family:dragon;
+	src:url(../fonts/dragon/dragon.ttf);
+}
+
+@font-face{
+	font-family:ristella;
+	src:url(../fonts/ristera/ristella.ttf);
+}
+
+.logo{
+	font-family:dragon;
+}
